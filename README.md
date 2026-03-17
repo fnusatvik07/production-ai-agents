@@ -4,37 +4,54 @@
 > A progressive, hands-on series covering the full modern agentic AI stack. Every project solves a real problem end-to-end — from environment setup to deployed service with observability.
 
 ```mermaid
-flowchart LR
-    subgraph RAG["🔵 RAG & Knowledge"]
-        P01["01 · GraphRAG\nLangGraph · Neo4j · RAGAS"]
-    end
-    subgraph MCP["🟣 Protocol Layer"]
-        P04["04 · FastMCP Gateway\nFastMCP 3.0 · Redis · OTel"]
-        P07["07 · Cross-Cloud Compliance\nA2A · Bedrock · Vertex · Azure"]
-    end
-    subgraph HITL["🔴 Human-in-the-Loop"]
-        P03["03 · SRE Incident Response\nLangGraph · FastMCP · HITL"]
-        P08["08 · PR Lifecycle Agent\nSend API · DeepEval · HITL"]
-        P09["09 · Adaptive Learning\nLangMem · SM-2 · pgvector"]
-    end
-    subgraph MULTI["🟢 Multi-Agent"]
-        P02["02 · A2A Code Review\nA2A SDK · CrewAI · LangGraph"]
-        P05["05 · Financial Intelligence\nAutoGen · Phoenix · Claude"]
-        P10["10 · Competitive Intel Swarm\nLangGraph Swarm · FastMCP"]
-    end
-    subgraph MEM["🔵 Memory & Monitoring"]
-        P06["06 · Data Pipeline Sentinel\nLangGraph Store · pgvector · Kafka"]
+%%{init: {"theme": "base", "themeVariables": {"fontSize": "16px", "primaryColor": "#1e3a5f", "primaryTextColor": "#ffffff", "primaryBorderColor": "#3b82f6", "lineColor": "#6b7280", "secondaryColor": "#1a1a2e", "tertiaryColor": "#0d1117", "clusterBkg": "#0f172a", "clusterBorder": "#334155", "edgeLabelBackground": "#1e293b", "titleColor": "#f1f5f9"}}}%%
+flowchart TB
+
+    subgraph RAG["  🔵  RAG & Knowledge Graphs  "]
+        direction LR
+        P01(["  📚  Project 01\n  GraphRAG Research Engine\n  ─────────────────────\n  LangGraph · Neo4j · RAGAS\n  Multi-hop reasoning · Hybrid search  "])
     end
 
-    P01 --> P04
-    P04 --> P03
-    P03 --> P05
-    P05 --> P02
-    P02 --> P06
-    P06 --> P08
-    P08 --> P09
-    P09 --> P07
-    P07 --> P10
+    subgraph PROTO["  🟣  Protocol Layer — MCP & A2A  "]
+        direction LR
+        P04(["  ⚡  Project 04\n  FastMCP Enterprise Gateway\n  ─────────────────────\n  FastMCP 3.0 · Redis · OpenTelemetry\n  8 tool servers · Rate limiting · Caching  "])
+        P07(["  ☁️  Project 07\n  Cross-Cloud Compliance\n  ─────────────────────\n  A2A · AWS Bedrock · GCP Vertex · Azure\n  GDPR · SOX · HIPAA parallel audits  "])
+    end
+
+    subgraph HITL["  🔴  Human-in-the-Loop Systems  "]
+        direction LR
+        P03(["  🚨  Project 03\n  SRE Incident Response\n  ─────────────────────\n  LangGraph · FastMCP · PostgreSQL\n  interrupt() · Runbook retrieval · HITL  "])
+        P08(["  🔀  Project 08\n  PR Lifecycle Agent\n  ─────────────────────\n  Anthropic SDK · Send API · DeepEval\n  Parallel review · Confidence gates  "])
+        P09(["  🎓  Project 09\n  Adaptive Learning Agent\n  ─────────────────────\n  LangMem · SM-2 Algorithm · pgvector\n  Spaced repetition · Scaffolded hints  "])
+    end
+
+    subgraph MULTI["  🟢  Multi-Agent Networks  "]
+        direction LR
+        P02(["  🤝  Project 02\n  A2A Code Review Network\n  ─────────────────────\n  A2A SDK · LangGraph · CrewAI\n  3 parallel agents · Unified report  "])
+        P05(["  📈  Project 05\n  Financial Intelligence\n  ─────────────────────\n  AutoGen · Arize Phoenix · Claude\n  SelectorGroupChat · Regime detection  "])
+        P10(["  🎯  Project 10\n  Competitive Intel Swarm\n  ─────────────────────\n  LangGraph Swarm · FastMCP Browser\n  5-agent handoff chain · Real-time  "])
+    end
+
+    subgraph MEM["  🔵  Memory & Monitoring  "]
+        direction LR
+        P06(["  🗄️  Project 06\n  Data Pipeline Sentinel\n  ─────────────────────\n  LangGraph Store · pgvector · Kafka\n  Episodic memory · Anomaly detection  "])
+    end
+
+    RAG   -->|"builds on →"| PROTO
+    PROTO -->|"adds HITL →"| HITL
+    HITL  -->|"scales to →"| MULTI
+    MULTI -->|"adds memory →"| MEM
+
+    style P01 fill:#1e3a5f,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style P04 fill:#2d1b69,stroke:#a855f7,stroke-width:2px,color:#fff
+    style P07 fill:#0c3050,stroke:#0ea5e9,stroke-width:2px,color:#fff
+    style P03 fill:#450a0a,stroke:#ef4444,stroke-width:2px,color:#fff
+    style P08 fill:#2e1065,stroke:#8b5cf6,stroke-width:2px,color:#fff
+    style P09 fill:#451a03,stroke:#f59e0b,stroke-width:2px,color:#fff
+    style P02 fill:#431407,stroke:#f97316,stroke-width:2px,color:#fff
+    style P05 fill:#052e16,stroke:#22c55e,stroke-width:2px,color:#fff
+    style P10 fill:#500724,stroke:#ec4899,stroke-width:2px,color:#fff
+    style P06 fill:#083344,stroke:#06b6d4,stroke-width:2px,color:#fff
 ```
 
 ---
