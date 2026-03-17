@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #111111;
+  color: #f0f0f0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #1a1a1a; }
+::-webkit-scrollbar-thumb { background: #404040; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+/* Netflix-style horizontal scroll row */
+.row-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 6px 0 20px;
+  scrollbar-width: thin;
+  scrollbar-color: #404040 #1a1a1a;
+}
+.row-scroll::-webkit-scrollbar { height: 3px; }
+
+/* Mermaid */
+.mermaid-wrap svg {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Mantine overrides for dark consistency */
+.mantine-Tabs-tab {
+  color: rgba(255,255,255,0.55) !important;
+  font-weight: 500 !important;
+}
+.mantine-Tabs-tab[data-active] {
+  color: #ffffff !important;
+}
+.mantine-Tabs-list {
+  border-bottom-color: rgba(255,255,255,0.1) !important;
+}

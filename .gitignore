@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+.venv/
+venv/
+*.egg-info/
+
+# Node
+web/node_modules/
+web/dist/
+
+# Generated files
+*.png
+*.excalidraw
+excalidraw.log
+generate_diagrams.py
+render_diagrams.py
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env.local
+.env.*.local
