@@ -3,7 +3,39 @@
 
 > A progressive, hands-on series covering the full modern agentic AI stack. Every project solves a real problem end-to-end — from environment setup to deployed service with observability.
 
-![Overview](./overview.png)
+```mermaid
+flowchart LR
+    subgraph RAG["🔵 RAG & Knowledge"]
+        P01["01 · GraphRAG\nLangGraph · Neo4j · RAGAS"]
+    end
+    subgraph MCP["🟣 Protocol Layer"]
+        P04["04 · FastMCP Gateway\nFastMCP 3.0 · Redis · OTel"]
+        P07["07 · Cross-Cloud Compliance\nA2A · Bedrock · Vertex · Azure"]
+    end
+    subgraph HITL["🔴 Human-in-the-Loop"]
+        P03["03 · SRE Incident Response\nLangGraph · FastMCP · HITL"]
+        P08["08 · PR Lifecycle Agent\nSend API · DeepEval · HITL"]
+        P09["09 · Adaptive Learning\nLangMem · SM-2 · pgvector"]
+    end
+    subgraph MULTI["🟢 Multi-Agent"]
+        P02["02 · A2A Code Review\nA2A SDK · CrewAI · LangGraph"]
+        P05["05 · Financial Intelligence\nAutoGen · Phoenix · Claude"]
+        P10["10 · Competitive Intel Swarm\nLangGraph Swarm · FastMCP"]
+    end
+    subgraph MEM["🔵 Memory & Monitoring"]
+        P06["06 · Data Pipeline Sentinel\nLangGraph Store · pgvector · Kafka"]
+    end
+
+    P01 --> P04
+    P04 --> P03
+    P03 --> P05
+    P05 --> P02
+    P02 --> P06
+    P06 --> P08
+    P08 --> P09
+    P09 --> P07
+    P07 --> P10
+```
 
 ---
 
