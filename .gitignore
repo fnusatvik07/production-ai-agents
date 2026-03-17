@@ -12,7 +12,9 @@ web/node_modules/
 web/dist/
 
 # Generated files
-*.png
+# (individual project diagrams excluded, root overview kept)
+project-*/diagram.png
+project-*/architecture.excalidraw
 *.excalidraw
 excalidraw.log
 generate_diagrams.py
