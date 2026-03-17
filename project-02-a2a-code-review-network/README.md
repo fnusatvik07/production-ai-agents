@@ -68,7 +68,6 @@ flowchart TB
     style TA fill:#e8fde8,stroke:#4CAF50
 ```
 
-![Architecture](./diagram.png)
 
 ---
 

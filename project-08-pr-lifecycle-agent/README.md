@@ -69,7 +69,6 @@ flowchart TB
     style EVAL fill:#e8fde8,stroke:#4CAF50
 ```
 
-![Architecture](./diagram.png)
 
 ---
 

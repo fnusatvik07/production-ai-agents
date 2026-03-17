@@ -52,7 +52,6 @@ flowchart TB
     style OBS fill:#e8fde8,stroke:#4CAF50
 ```
 
-![Architecture](./diagram.png)
 
 ---
 
